@@ -10,7 +10,6 @@ class LinkedList {
         Node* getHead() const;
         Node* getTail() const;
         void setHead(Node*);
-        //friend std::ostream& operator<<(std::ostream& out, LinkedList& ll);
     private:
         Node* head;
         Node* tail;        
