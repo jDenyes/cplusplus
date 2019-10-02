@@ -1,0 +1,42 @@
+# -*- MakeFile -*-
+
+#variable in makefiles, I can call on this variable with $(CC)
+#this variable indicates which compiler to use
+CC = g++
+
+#compiler rules
+CFLAGS = -I
+
+#this variable includes the header file dependencies for our files
+DEPS = node.h
+
+#for each .o it depends on the .c, whcih depend on DEPS. $@ means the left side of the :, $< means the first argument in DEPS
+%.o : %.c $(DEPS)
+	$(CC) -c -o $@ $<
+
+#the first target in a makefile is executed when you type make in the command line
+all: main
+
+#this seems really inefficient, every time I add a file I have to add it the main make ...
+main: main.o ll.o node.o stack.o arrayStack.o
+	$(CC) main.o ll.o node.o stack.o arrayStack.o -o main
+
+#can run any individual target by typing make "target"
+main.o: main.cpp
+	g++ -c main.cpp
+
+arrayStack.o: arrayStack.cpp arrStack.h
+	g++ -c arrayStack.cpp
+
+ll.o: ll.cpp ll.h
+	g++ -c ll.cpp
+
+stack.o: stack.cpp stack.h
+	g++ -c stack.cpp
+
+node.o:  node.cpp
+	g++ -c node.cpp
+
+#can run clean by typing make clean
+clean:
+	rm -f *.o

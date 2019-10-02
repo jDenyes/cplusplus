@@ -21,3 +21,4 @@ void swapLinks(Node*, Node*);
 void betterReverse(LinkedList& ll);
 void recursivePrint(Node* head);
 void recursiveReverse( );
+void stackReverse(Node *);

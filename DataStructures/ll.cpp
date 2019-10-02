@@ -1,5 +1,7 @@
 #include "ll.h"
+#include "stack.h"
 #include <iostream>
+#include "arrStack.h"
 
 LinkedList::LinkedList(int value) {
     this->head = new Node(value);
@@ -88,4 +90,8 @@ void recursiveReverse(Node* head) {
      if(head->getNext() == 0) {
          
      }
+}
+
+void stackReverse(Node* head) {
+    arrStack stack(10);
 }

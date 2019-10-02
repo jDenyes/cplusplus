@@ -1,24 +1,15 @@
 #include "ll.h"
 #include "stack.h"
 #include <iostream>
-#include "arrayStack.h"
+#include "arrStack.h"
 
 void linkTest();
 void stackTest();
-void llStackTest();
+
 
 int main(){
-    llStackTest();
+
     return 0;
-}
-
-    LinkedList ll(5);
-    ll.appendValue(8);
-    ll.appendValue(6);
-}
-
-void stackRevereseLL(ll.getHead()) {
-
 }
 
 void linkTest() {
