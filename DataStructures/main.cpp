@@ -5,11 +5,16 @@
 
 void linkTest();
 void stackTest();
-
+void reverseStackTest();
+void bracesTest();
 
 int main(){
-
     return 0;
+}
+
+void bracesTest() {
+    const char *braces = "{([]){}}()[]";
+    std::cout << balancedParentheses(braces) << std::endl;
 }
 
 void linkTest() {
@@ -25,6 +30,13 @@ void linkTest() {
     betterReverse(ll);
     std::cout << ll << std::endl;
     recursivePrint(ll.getHead());
+}
+
+void reverseStackTest() {
+    char c[] = "test";
+    std::cout << c << std::endl;
+    reverseString(c);
+    std::cout << c << std::endl;
 }
 
 void stackTest() {

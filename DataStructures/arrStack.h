@@ -12,7 +12,13 @@ public:
     void Push(int x);
     void Pop();
     int Top();
+    int getTop();
+    int getSize();
 };
+
+void reverseString(char *c);
+bool balancedParentheses(const char *c);
+bool isOpeningBrace(char);
 
 // main() {
 //     arrStack stack(1);
